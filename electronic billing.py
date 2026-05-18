@@ -1,8 +1,8 @@
 import csv
 from datetime import datetime
 
-PRODUCT_FILE = r"C:\Users\nilov\ReDi School\Retail Electronic Billing project\electronic billing-project details\electronic billing\products_large.csv"
-CUSTOMER_FILE = r"C:\Users\nilov\ReDi School\Retail Electronic Billing project\electronic billing-project details\electronic billing\customers_large.csv"
+PRODUCT_FILE = r"C:\Users\nilov\ReDi School\Retail Electronic Billing project\electronic billing-project details\electronic billing\products.csv"
+CUSTOMER_FILE = r"C:\Users\nilov\ReDi School\Retail Electronic Billing project\electronic billing-project details\electronic billing\customers.csv"
 
 
 # ---------------- FILE HANDLING ---------------- #
