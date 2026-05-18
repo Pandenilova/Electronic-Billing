@@ -158,7 +158,7 @@ def manage_products(products):
 
 def manage_customers(customers):
     while True:
-        print("\n1. Show Customers\n2. Remove Customer\n3. Back")
+        print("\n1. Show Customers\n2. Remove Customer\n3. Add customer \n4. Back")
         choice = input("Choice: ")
 
         if choice == '1':
