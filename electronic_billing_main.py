@@ -205,35 +205,33 @@ def manage_products(products):
         elif choice == '4':
             break
 
-
 def manage_customers(customers):
-    while True:
-        print("\n1. Show Customers\n2. Remove Customer\n3. Back")
+while True:
+        print("\n1. Show Customers\n2. Remove Customer\n3. Add customer \n4. Back")
         choice = input("Choice: ")
 
         if choice == '1':
-            if not customers:
-                print("Customer database ledger is empty.")
-            else:
-                for c in customers:
-                    print(c)
+            for c in customers:
+                print(c)
 
         elif choice == '2':
-            cid = input("Enter customer ID: ").strip()
-            initial_count = len(customers)
-            
-            # Filter entries out safely ensuring string compatibility matches
-            customers[:] = [c for c in customers if str(c["customer_id"]) != cid]
-            
-            if len(customers) < initial_count:
-                print(f"Customer log history '{cid}' dropped out of system stack.")
-            else:
-                print("Customer ID reference index missing.")
+            cid = input("Enter customer ID: ")
+            customers[:] = [c for c in customers if c["customer_id"] != cid]
 
         elif choice == '3':
+            cid = input("Customer ID: ")
+            items = input("Items (format: name xqty, ...): ")
+            total = float(input("Total: "))
+            now = datetime.now().strftime("%Y-%m-%d %H:%M")
+            customers.append({
+                "customer_id": cid,
+                "items": items,
+                "total": total,
+                "datetime": now
+            })
+
+        elif choice == '4':
             break
-
-
 # ---------------- MAIN MENU ---------------- #
 
 def main():
